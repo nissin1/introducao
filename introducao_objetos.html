@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+    <h1>Objetos</h1>
+
+    <script>
+        // Os objetos são separados por vírgulas. Strings precisam de aspas, números não
+        const caneta = {
+            nome: "caneta",
+            preco: 2,
+            quantidade: 5
+        }        
+        // Ambas as formas de escrever abaixo fazem a mesma coisa. OBS: a linha 20 usa crase e não aspas simples, no que chamamos de Interpolação
+        document.write(caneta.nome + " custa R$" + caneta.preco + " e há " + caneta.quantidade + " unidades em estoque <br>")
+        document.write(`${caneta.nome} custa R$${caneta.preco} e há ${caneta.quantidade} unidades em estoque <br>`)
+    </script>
+</body>
+</html>

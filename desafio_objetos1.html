@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Objetos 1</title>
+</head>
+<body>
+    <h1>Desafio Objetos 1</h1>
+
+    <script>
+        // Os objetos são separados por vírgulas. Strings precisam de aspas, números não
+        const carro = {
+            modelo: "Uno",
+            ano: 2023,
+            km: 10000,
+            combustivel: "gasolina",
+            litrosConsumidos: 625
+        };
+        
+        // Ambas as formas de escrever abaixo fazem a mesma coisa. OBS: usa-se crase e não aspas simples, no que chamamos de Interpolação
+        document.write(`O carro do modelo ${carro.modelo}, ano ${carro.ano}, fez em média ${carro.km / carro.litrosConsumidos}Km/L de ${carro.combustivel}<br>`);
+        // OU:
+        let media = (carro.km / carro.litrosConsumidos)
+        document.write(`O carro do modelo ${carro.modelo}, ano ${carro.ano}, fez em média ` + media + `Km/L de ${carro.combustivel}<br>`);
+    </script>
+</body>
+</html>

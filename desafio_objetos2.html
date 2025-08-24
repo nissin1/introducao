@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Objetos 2</title>
+</head>
+<body>
+    <h1>Desafio Objetos 2</h1>
+
+    <script>
+        // Os objetos são separados por vírgulas. Strings precisam de aspas, números não
+        const endereco = {
+            logradouro: "Rua Doutor Thouzet",
+            numero: 600
+        }
+        
+        const pessoa = {
+           nome: "Vinícius",
+           sobrenome: "Cardoso",
+           endereco: endereco // Alternativamente eu poderia escrever apenas "endereco" (sem as aspas) e o programa já iria entender, porque já foi declarado antes
+        }
+
+        document.write(`${pessoa.nome} ${pessoa.sobrenome} mora no endereço ${pessoa.endereco.logradouro}, nº${endereco.numero}`)
+    </script>
+</body>
+</html>

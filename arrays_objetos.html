@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays e Objetos</title>
+</head>
+<body>
+   <h1>Arrays e Objetos</h1>
+    <ul id="listaPessoas"> <!--É por meio desse "id" que eu conseguirei selecionar os objetos no JS-->
+        <li>Vinicius: vinicius@gmail</li>
+        <li>Beatriz: beatriz@gmail</li>
+        <li>Alexanda: alexanda@gmail</li>
+        <li>Amilton: amilton@gmail</li>
+        <li>Ilza: ilza@gmail</li>
+    </ul>
+
+    <!--A tag script permite colocar código JavaScript no HTML-->
+    <script>
+        const pessoas = [
+            {nome: "Vinicius", email: "vinicius@gmail.com"},
+            {nome: "Beatriz", email: "beatriz@gmail.com"},
+            {nome: "Alexanda", email: "alexanda@gmail.com"},
+            {nome: "Amilton", email: "amilton@gmail.com"},
+            {nome: "Ilza", email: "ilza@gmail.com"}
+        ]
+
+        const listaPessoas = document.getElementById("listaPessoas") // Agora temos uma referência à tag ul do HTML no JS
+        
+        listaPessoas.innerHTML += "<li> teste: teste@server.com</li>" // o operador lógico "+=" é necessário para adicionar o conteúdo do <li> do JS ao <ul> pré-existente no HTML. Caso tivesse colocado apenas o operador "=", a linha 30 iria sobreescrever todo o <ul> do HTML
+    </script>
+
+</body>
+</html>

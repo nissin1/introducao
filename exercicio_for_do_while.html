@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Programação com JS 02</title>
+</head>
+
+<body>
+    <h1>Exercício for, do... while</h1>
+
+    <script>
+        
+        //O loop 'for' faz a mesma coisa que o loop while, porém é mais eficiente
+        //Ele é utilizado quando sabemos exatamente quantas vezes o comando irá se repetir
+        let n = parseFloat(prompt("Digite um número"));
+
+        if (!isNaN(n)) {
+            for(let i = 0; i <= 1000; i++){
+                document.write(n + " x " + i + ": " + n * i + "<br>");
+            }
+        } else {
+            alert("Digite apenas número");
+        }
+
+        //O loop 'do...while' é similar ao 'while', mas executa ao menos uma vez, mesmo que na primeira vez a condição seja falsa
+        //Na prática o loop 'while' é mais utilizado que o loop 'do...while'
+        let dado1 = parseInt(Math.random() * 6 + 1);
+        let dado2 = parseInt(Math.random() * 6 + 1);
+        contador = 1
+
+        do {
+            console.log(dado1, dado2);
+            contador++;
+            dado1 = parseInt(Math.random() * 6 + 1);
+            dado2 = parseInt(Math.random() * 6 + 1);
+        } while (dado1 !== dado2);
+
+        console.log("Os dados foram jogados " + contador + " vezes. E o número repetido foi o " + dado1);
+
+    </script>
+</body>
+
+</html>
