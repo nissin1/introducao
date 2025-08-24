@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+</head>
+<body>
+    <h1>Funções</h1>
+
+    <input type="number" id="number" value="1">
+    <button onclick="mostrarTabuada()">Mostrar tabuada</button>
+    <button onclick="limparTabuada()">Limpar tabuada</button>
+    <div id="output"></div>
+
+    <script>
+
+        const input = document.getElementById("number")
+        const output = document.getElementById("output")
+
+        let tabuadaHTML = ""
+        function mostrarTabuada() {
+            const inputValue = parseFloat(input.value) // Este ".value" no final é para que o valor digitado pelo usuário fique armazenado
+            
+            limparTabuada() // Limpa a tabuada anterior toda vez que uma nova for feita, evitando que os valores da tabuada anterior continuem aparecendo na tela mesmo depois que uma nova tabuada for feita. Essa linha de código, por ser uma função, reaproveita os comandos das linhas 33 a 36
+
+            for(let i = 1; i <= 100; i++){
+                tabuadaHTML += `${i} x ${inputValue} = ${i * inputValue} <br>`
+            }
+            output.innerHTML = tabuadaHTML
+        }
+
+        function limparTabuada(){
+            tabuadaHTML = ""
+            output.innerHTML = ""
+        }
+
+        mostrarTabuada()
+
+    </script>
+</body>
+</html>
